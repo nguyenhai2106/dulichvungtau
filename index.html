@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <title>Project 4</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Boostrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet" />
+    <!-- CSS internal -->
+    <style>
+        .bi {
+            fill: red;
+        }
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            height: fit-content;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            border: solid rgba(0, 0, 0, 0.15);
+            border-width: 1px 0;
+            box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+        }
+        
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+        
+        .bi {
+            vertical-align: -0.125em;
+            fill: currentColor;
+        }
+        
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+        
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .nav-item a {
+            font-weight: 600;
+        }
+        
+        .card-grid .card-grid-lg {
+            height: 560px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .card-grid .card-grid-sm {
+            height: calc(280px - calc(var(--bs-gutter-y) / 2));
+        }
+        
+        .container {
+            max-width: 1200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="container bg-light">
+        <nav class="navbar navbar-expand-lg sticky-top mb-3" aria-label="Eleventh navbar example">
+            <div class="container-md">
+                <img src="https://wanderlustyle.com/wp-content/uploads/2018/02/world-travel-512.png" alt="" style="width: 56px; padding: 0 10px 0 0" />
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarsExample09">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link actived" aria-current="page" href="#">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hotel">Khách Sạn</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#destination">Địa Điểm</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-bs-toggle="dropdown" aria-expanded="false">Tin Tức</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown09">
+                                <li><a class="dropdown-item" href="#">Bản tin</a></li>
+                                <li><a class="dropdown-item" href="/camnang/index.html">Cẩm nang</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Tư vấn</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#service">Dịch Vụ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Giới Thiệu</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-around">
+                        <form class="col-6 col-sm-9 col-lg-auto mb-3 mb-lg-0 me-2">
+                            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                        </form>
+                        <div class="text-end col-auto">
+                            <a type="button" class="btn btn-primary me-sm-1" href="/Project3/login.html">Log In</a>
+                            <a type="button" class="btn btn-success" href="/Project3/signup.html">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Carausel -->
+    <div class="container bg-light">
+        <div id="myCarousel" class="carousel slide mb-2" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item" style="height: fit-content">
+                    <img class="bd-placeholder-img" src="/img/hotramstrip.jpg" alt="Hồ Tràm Strip" style="width: 100%; height: auto; object-fit: cover" />
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>Example headline.</h1>
+                            <p>
+                                Some representative placeholder content for the first slide of the carousel.
+                            </p>
+                            <p>
+                                <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="height: fit-content">
+                    <img class="bd-placeholder-img" src="/img/baitruocVT.jpg" alt="Bãi trước Vũng Tàu" style="width: 100%; height: auto; object-fit: cover" />
+
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Another example headline.</h1>
+                            <p>
+                                Some representative placeholder content for the second slide of the carousel.
+                            </p>
+                            <p>
+                                <a class="btn btn-lg btn-primary" href="#">Learn more</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active" style="height: fit-content">
+                    <img class="bd-placeholder-img" src="/img/binhchauresort.jpg" alt="Bình Châu Resort" style="width: 100%; height: auto; object-fit: cover" />
+                    <div class="container">
+                        <div class="carousel-caption text-end">
+                            <h1>One more for good measure.</h1>
+                            <p>
+                                Some representative placeholder content for the third slide of this carousel.
+                            </p>
+                            <p>
+                                <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Destination -->
+
+    <div id="destination" class="container bg-light">
+        <h2 style="font-family: 'Roboto', sans-serif;" class="mt-3">Địa điểm phổ biến</h2>
+        <div class="container-md py-2 px-0">
+            <div class="row mb-2 g-3">
+                <div class="col-12 col-lg-6 col-md-12 col-s-12 mb-2">
+                    <div class="card card-cover shadow-sm px-0 rounded-0">
+                        <div class="row card-body d-flex flex-row justify-content-between p-2 gx-2">
+                            <div class="card__img col-4" style="display: flex; align-items: center;">
+                                <img style="width: 100%; height: auto;" src="/img/vungtau.jpg" alt="" />
+                            </div>
+                            <div class="card__text-btn col-8 pl-2">
+                                <p class="card-text mb-0" style="text-align: justify;">
+                                    Chỉ cách Sài Gòn chưa đến 2 tiếng chạy xe, Vũng Tàu luôn là địa điểm được nghĩ đến đầu tiên cho chuyến du lịch đầy ngẫu hứng. Quen thuộc là thế nhưng du lịch Vũng Tàu cũng ngày một phát triển khách sạn đẹp, điểm vui chơi mới lạ mọc lên khiến nơi đây chưa
+                                    bao giờ hết hot.
+                                </p>
+                                <div class="btn-group mt-2">
+                                    <button class="btn btn-sm btn-outline-primary" type="button">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-md-12 col-s-12">
+                    <div class="card shadow-sm px-0 rounded-0">
+                        <div class="row card-body d-flex flex-row justify-content-between p-2 gx-2">
+                            <div class="card__img col-4">
+                                <img style="width: 100%; height: auto; max-width: 225px;" src="/img/hotram.jpg" alt="" />
+                            </div>
+                            <div class="card__text-btn col-8">
+                                <p class="card-text mb-0" style="text-align: justify;">
+                                    Hồ Tràm là một thị trấn nhỏ ven biển nằm ở tỉnh Bà Rịa–Vũng Tàu, thuộc huyện Xuyên Mộc, nằm giữa hai xã Bình Châu và thị trấn Long Hải. Hồ Tràm nằm cách thành phố Hồ Chí Minh khoảng 125 km.
+                                </p>
+                                <div class="btn-group mt-2">
+                                    <button class="btn btn-sm btn-outline-primary" type="button">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-2 g-3">
+                <div class="col-12 col-lg-6 col-md-12 col-s-12">
+                    <div class="card shadow-sm px-0 rounded-0">
+                        <div class="row card-body d-flex flex-row justify-content-between p-2 gx-2">
+                            <div class="card__img col-4">
+                                <img style="width: 100%; height: auto;" src="/img/phuochai.jpg" alt="" />
+                            </div>
+                            <div class="card__text-btn col-8">
+                                <p class="card-text mb-0" style="text-align: justify;">
+                                    Biển Phước Hải nằm tại thị trấn Phước Hải, huyện Đất Đỏ, tỉnh Bà Rịa - Vũng Tàu. Biển cách trung tâm thành phố Bà Rịa khoảng 16km, từ xa quý khách có thể thấy bờ cát vàng mịn trải dài đến Long Hải - khi biển cạn.</p>
+                                <div class="btn-group mt-2">
+                                    <button class="btn btn-sm btn-outline-primary" type="button">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-md-12 col-s-12">
+                    <div class="card shadow-sm px-0 rounded-0">
+                        <div class="row card-body d-flex flex-row justify-content-between p-2 gx-2">
+                            <div class="card__img col-4">
+                                <img style="width: 100%; height: auto;" src="/img/binhchau.jpg" alt="" />
+                            </div>
+                            <div class="card__text-btn col-8">
+                                <p class="card-text mb-0" style="text-align: justify;">
+                                    Suối nước nóng Bình Châu là địa điểm du lịch nổi tiếng ở Vũng Tàu, điểm đến lý tưởng cho mọi người trong dịp nghỉ lễ, nghỉ hè. Tới khu du lịch Bình Châu bạn không chỉ được đắm mình trong làn nước suối khoáng nóng mà còn được mãn nhãn với cảnh bình minh
+                                    trên biển Hồ Cốc.
+                                </p>
+                                <div class="btn-group mt-2">
+                                    <button class="btn btn-sm btn-outline-primary" type="button">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service -->
+    <div id="service" class="pt-2 pb-0 card-grid bg-light">
+        <div class="container">
+            <h2 style="font-family: 'Roboto', sans-serif;">Dịch vụ Giải trí</h2>
+            <div class="row g-4">
+                <!-- Left big card -->
+                <div class="col-lg-6">
+                    <div class="card card-overlay-bottom card-grid-lg card-bg-scale" style="background-image:url(/img/canokeodu.jpg); background-position: center left; background-size: cover;">
+                        <!-- Card featured -->
+                        <span class="card-featured" title="Featured post"><i class="fas fa-star"></i></span>
+                        <!-- Card Image overlay -->
+                        <div class="card-img-overlay d-flex align-items-center p-2 p-sm-4">
+                            <div class="w-100 mt-auto">
+                                <!-- Card category -->
+                                <!-- Card title -->
+                                <h2 class="text-light h1"><a href="#" class="text-reset stretched-link">Cano káo dù bay.</a></h2>
+                                <!-- Card info -->
+                                <p class="text-white">Dù bay hay còn được gọi là ca-no dù bay là trò chơi mà du khách sẽ được cột vào dù, rồi cano sẽ kéo dù bay lên trên cao giữa biển.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <!-- Card item START -->
+                        <div class="col-12">
+                            <div class="card card-overlay-bottom card-grid-sm card-bg-scale" style="background-image:url(/img/lanbien.png); background-position: center left; background-size: cover;">
+                                <!-- Card Image -->
+                                <!-- Card Image overlay -->
+                                <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
+                                    <div class="w-100 mt-auto">
+                                        <!-- Card title -->
+                                        <h4 class="text-white"><a href="post-single-4.html" class="text-reset stretched-link">Lặn biển</a></h4>
+                                        <!-- Card info -->
+                                        <p class="text-white">Lựa chọn trải nghiệm lặn ngắm san hô tại Côn Đảo sẽ giúp bạn cùng du khách có thêm sơ hội được khám phá những điều bí ẩn mới bên dưới đại dương.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card item END -->
+                        <!-- Card item START -->
+                        <div class="col-md-6">
+                            <div class="card card-overlay-bottom card-grid-sm card-bg-scale" style="background-image:url(/img/cauca.jpg); background-position: center left; background-size: cover;">
+                                <!-- Card Image overlay -->
+                                <div class="card-img-overlay d-flex align-items-center justify-center p-3 p-sm-4">
+                                    <div class="w-100 mt-auto">
+                                        <!-- Card title -->
+                                        <h4 class="text-white"><a href="#" class="stretched-link text-reset">Câu Cá, Câu Mực</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-overlay-bottom card-grid-sm card-bg-scale" style="background-image:url(/img/casino.jpg); background-position: center left; background-size: cover;">
+                                <!-- Card Image overlay -->
+                                <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4">
+                                    <div class="w-100 mt-auto">
+                                        <!-- Card title -->
+                                        <h4 class="text-white"><a href="#" class="stretched-link text-reset">Casino</a></h4>
+                                        <!-- Card info -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Khach san - Resort -->
+    <div id="hotel">
+        <div class="album py-3 bg-light">
+            <div class="container">
+                <h2 style="font-family: 'Roboto', sans-serif;">Khách sạn - Resort</h2>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <!-- Lan Rung -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" style="background-image: url(/img/lanrungphuochai.webp); background-size: cover">
+                                <title>Placeholder</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text mb-0">
+                                    <b>Lan Rung Phuoc Hai Resort and Spa</b> <br> Cách thành phố Hồ Chí Minh chín mươi phút đi xe, Lan Rừng Resort là lựa chọn nghỉ dưỡng đẳng cấp với kiến trúc Châu Âu.
+                                </p>
+                                <div class="group-star btn-group px-0 py-2">
+                                    <button type="button" class="btn py-1 px-0 rounded border-white">
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star"></i>
+                                    </button>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- The Imperial Hotel & Resort -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" style="background-image: url(/img/theimperial.webp); background-size: cover">
+                                <title>Placeholder</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text mb-0">
+                                    <b>The Imperial Hotel & Resort</b> <br> Khách sạn tiêu chuẩn 5 sao này mang đến cảm giác Châu Âu khi kết hợp tinh tế giữa công nghệ hiện đại và chi tiết thiết kế cổ điển.
+                                </p>
+                                <div class="group-star btn-group px-0 py-2">
+                                    <button type="button" class="btn py-1 px-0 rounded border-white">
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                    </button>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Melia Ho Tram Beach Resort -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" style="background-image: url(/img/meliahotram.webp); background-size: cover">
+                                <title>Placeholder</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text mb-0">
+                                    <b>Melia Ho Tram Beach Resort</b> <br> Melia Ho Tram nằm cạnh bãi biển ở khu du lịch Hồ Tràm. Chỗ nghỉ này có lễ tân 24 giờ, 3 nhà hàng và câu lạc bộ bãi biển.
+                                </p>
+                                <div class="group-star btn-group px-0 py-2">
+                                    <button type="button" class="btn py-1 px-0 rounded border-white">
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                    </button>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pullman Vung Tau -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" style="background-image: url(/img/pullman.jpg); background-size: cover">
+                                <title>Placeholder</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text mb-0">
+                                    <b>Pullman Vung Tau</b> <br> Khách sạn cao cấp này có tòa nhà phụ hình vòm độc đáo, nằm cách Bãi Sau 7 phút đi bộ và cách Chùa Thích Ca Phật Đài 4 km.
+                                </p>
+                                <div class="group-star btn-group px-0 py-2">
+                                    <button type="button" class="btn py-1 px-0 rounded border-white">
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star"></i>
+                                    </button>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Holiday Inn Resort Ho Tram Beach -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" style="background-image: url(/img/minaraspring.webp); background-size: cover">
+                                <title>Placeholder</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text mb-0">
+                                    <b>Holiday Inn Resort Ho Tram Beach</b> <br> Minera Springs rộng 12 hecta, 30 dịch vụ ngâm tắm khoáng nóng, spa, các liệu pháp xông và dịch vụ ẩm thực hấp dẫn.
+                                </p>
+                                <div class="group-star btn-group px-0 py-2">
+                                    <button type="button" class="btn py-1 px-0 rounded border-white">
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star"></i>
+                                    </button>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" style="background-image: url(/img/inn.webp); background-size: cover">
+                                <title>Placeholder</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text mb-0">
+                                    <b>Holiday Inn Resort Ho Tram Beach</b> <br> Sở hữu 561 phòng nghỉ và phòng suite tiện nghi được bài trí sang trọng trong khu phức hợp The Grand Ho Tram Strip.
+                                </p>
+                                <div class="group-star btn-group px-0 py-2">
+                                    <button type="button" class="btn py-1 px-0 rounded border-white">
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star" style="color: red"></i>
+                                        <i class="bi bi-star"></i>
+                                    </button>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Facebook Plug in-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v14.0" nonce="tb97mDC4"></script>
+    <div class="container">
+        <div class="fb-comments" data-href="https://haintfx17393funix.000webhostapp.com/" data-width="100%" data-numposts="5"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <h5>Công Ty</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Trang chủ</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Bảng Giá</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Về Chúng Tôi</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Liên Hệ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <h5>Địa Điểm</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Vũng Tàu</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Hồ Tràm</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Hồ Cốc</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Bình Châu</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Phước Hải</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <h5>Tin Tức</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="" class="nav-link p-0 text-muted">Bản Tin</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="/camnang/index.html" class="nav-link p-0 text-muted">Cẩm Nang</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Tư Vấn</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Tuyển Dụng</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <form>
+                        <h5>Trở thành người có thông tin nhanh nhất</h5>
+                        <p>Đăng ký để nhận ưu đãi từ chúng tôi.</p>
+                        <div class="d-flex flex-column flex-sm-row gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email" />
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Subiz -->
+    <script>
+        ! function(s, u, b, i, z) {
+            var o, t, r, y;
+            s[i] || (s._sbzaccid = z, s[i] = function() {
+                s[i].q.push(arguments)
+            }, s[i].q = [], s[i]("setAccount", z), r = ["widget.subiz.net", "storage.googleapis" + (t = ".com"), "app.sbz.workers.dev", i + "a" + (o = function(k, t) {
+                var n = t <= 6 ? 5 : o(k, t - 1) + o(k, t - 3);
+                return k !== t ? n : n.toString(32)
+            })(20, 20) + t, i + "b" + o(30, 30) + t, i + "c" + o(40, 40) + t], (y = function(k) {
+                var t, n;
+                s._subiz_init_2094850928430 || r[k] && (t = u.createElement(b), n = u.getElementsByTagName(b)[0], t.async = 1, t.src = "https://" + r[k] + "/sbz/app.js?accid=" + z, n.parentNode.insertBefore(t, n), setTimeout(y, 2e3, k + 1))
+            })(0))
+        }(window, document, "script", "subiz", "acriuuxxhmwkpplcywhg")
+    </script>
+
+    <!-- jQurey JS -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.js"></script>
+
+
+</body>
+
+</html>
