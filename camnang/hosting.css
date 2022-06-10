@@ -1,0 +1,234 @@
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    
+    html {
+        background-color: black;
+        display: flex;
+    }
+    
+    body {
+        height: auto;
+        background-color: #e4e4e4;
+        margin: auto;
+        padding-top: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    /* Header - Navigation */
+    
+    li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 10px 0 10px;
+        font-size: 12px;
+    }
+    
+    li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    .themed-grid-col {
+        background-color: rgba(86, 61, 124, .15);
+        border: 1px solid rgba(86, 61, 124, .2);
+    }
+    
+    .themed-container {
+        padding: .75rem;
+        margin-bottom: 1.5rem;
+        background-color: rgba(0, 123, 255, .15);
+        border: 1px solid rgba(0, 123, 255, .2);
+    }
+    
+    .nav__item li a:hover {
+        color: red;
+    }
+    /* Banner */
+    
+    #banner {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        background-image: url(/img/hostingbnb.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .banner__content {
+        padding-top: 16%;
+        padding-left: 36px;
+    }
+    
+    #banner h1 {
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        margin: 0 0 12px 0;
+        color: #f1f1f1;
+    }
+    
+    #banner p {
+        margin: 0px;
+        font-size: 18px;
+        color: #f1f1f1;
+    }
+    
+    .container-md img {
+        width: 100%;
+    }
+    /* Content */
+    
+    .content {
+        height: fit-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .content a {
+        text-decoration: none;
+        display: block;
+    }
+    
+    .content__item h5 {
+        color: #198754;
+        font-weight: 600;
+    }
+    
+    .content__item p {
+        text-align: justify;
+        text-indent: 30px;
+    }
+    /* Mobile */
+    
+    @media (max-width: 767px) {
+        .nav-content {
+            background-color: #556270;
+        }
+        .nav-content li a {
+            color: #f1f1f1;
+        }
+        #banner {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-size: 100%;
+            height: fit-content;
+        }
+        #banner h1,
+        #banner p {
+            line-height: 50px;
+            color: #fff;
+        }
+        .picture-item {
+            margin-top: 40px;
+        }
+        .piture {
+            margin-top: 0px;
+        }
+        .picture__item-child {
+            margin-bottom: 30px;
+        }
+        .content {
+            margin-top: 20px;
+            background-color: #f7f7f7;
+            border: none;
+        }
+        .content__item {
+            margin-top: 32px;
+        }
+        .container-md {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .navigation {
+            background-color: #556270;
+        }
+        .navigation li a {
+            color: #fff;
+            font-weight: 600;
+        }
+        .banner__content {
+            padding: 0;
+            padding-left: 30px;
+        }
+    }
+    
+    @media (min-width: 769px) {
+        .navigation {
+            background-color: #fff;
+        }
+        .navigation li a {
+            color: #785a5a;
+            font-weight: 600;
+        }
+    }
+    /* Tablet */
+    
+    @media (min-width: 768px) and (max-width: 991px) {
+        .wide {
+            width: 720px;
+        }
+        .nav-content {
+            background-color: #556270;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .nav-content li a {
+            color: #f1f1f1;
+        }
+        #banner {
+            padding-top: 40px;
+            padding-bottom: 20px;
+            background-size: 100% auto;
+            height: 400px;
+        }
+        #banner h1,
+        #banner p {
+            line-height: 50px;
+            color: white;
+            font-family: sans-serif;
+        }
+        .picture img {
+            margin-bottom: 25px;
+        }
+        .picture__header {
+            border-top: 1px solid #dfdfdf;
+            padding-top: 20px;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .content__item h4 {
+            font-size: 36px;
+            font-family: sans-serif;
+        }
+    }
+    /* Desktop */
+    
+    @media (min-width: 992px) {
+        .nav-content li a {
+            color: #785a5a;
+        }
+        .content {
+            margin-top: 20px;
+            margin-left: 0;
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            border-top: 1px solid #dbdbdb;
+            text-align: justify;
+        }
+        .content a {
+            font-weight: 700;
+        }
+    }

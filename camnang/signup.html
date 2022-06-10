@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="authform.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Icon Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="auth_form container-md mx-3">
+        <div class="auth_form_container row">
+            <div class="auth_form_header col-lg-12 col-sm-12">
+                <h3 class="auth_form_heading">
+                    Đăng ký
+                </h3>
+                <span class="auth_form_swtich_btn">
+                    <a href="login.html" style="text-decoration: none; color:var(--font-color)">Đăng nhập</a>
+                </span>
+            </div>
+
+            <div class="auth_form_form">
+                <div class="auth_form_group">
+                    <input type="text" class="auth_form_input" placeholder="Nhập email của bạn">
+                </div>
+                <div class="auth_form_group">
+                    <input type="password" class="auth_form_input" placeholder="Nhập mật khẩu của bạn">
+                </div>
+                <div class="auth_form_group">
+                    <input type="password" class="auth_form_input" placeholder="Nhập lại mật khẩu của bạn">
+                </div>
+            </div>
+            <div class="auth_form_aside">
+                <p class="auth_form_policy_text">
+                    Bằng việc đăng ký, bạn đã đồng ý với chúng tôi về
+                    <a href="" class="auth_form_text_link">Điều khoản dịch vụ</a> và
+                    <a href="" class="auth_form_text_link">Chính sách bảo mật</a>
+                </p>
+            </div>
+            <div class="auth_form_controls">
+                <button class="btn btn-nomal auth_form_controls_back" onclick="parent.location='../index.html'">TRỞ LẠI</button>
+                <button class="btn btn-primary">ĐĂNG KÝ</button>
+            </div>
+        </div>
+        <div class="auth_form_socials">
+            <a href="#" class="btn btn_with-icon btn-sizes auth_form_socials-facebook">
+                <i class="fa-brands fa-facebook-square auth-form_socials-icon"></i>
+                <span class="auth_form_socials_lable">Kết nối với Facebook</span>
+            </a>
+            <a href="#" class="btn btn_with-icon btn-sizes auth_form_socials-google">
+                <i class="fa-brands fa-google auth-form_socials-icon"></i>
+                <span class="auth_form_socials_lable">Kết nối với Google</span>
+            </a>
+        </div>
+    </div>
+    <!-- jQurey JS -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

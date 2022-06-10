@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="authform.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Icon Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <title>Log In</title>
+</head>
+
+<body>
+    <div class="auth_form">
+        <div class="auth_form_container">
+            <div class="auth_form_header">
+                <h3 class="auth_form_heading">Đăng nhập</h3>
+                <span class="auth_form_swtich_btn">
+                    <a href="signup.html" style="text-decoration: none; color:var(--font-color)">Đăng ký</a>
+                </span>
+            </div>
+
+            <div class="auth_form_form">
+                <div class="auth_form_group">
+                    <input type="text" class="auth_form_input" placeholder="Nhập email của bạn">
+                </div>
+                <div class="auth_form_group">
+                    <input type="password" class="auth_form_input" placeholder="Nhập mật khẩu của bạn">
+                </div>
+            </div>
+            <div class="auth_form_aside">
+                <div class="auth_form_help">
+                    <a href="" class="auth_form_help_link auth_form_help_forgot">Quên mật khẩu</a>
+                    <span class="auth_form_help_separate"></span>
+                    <a href="" class="auth_form_help_link">Cần trợ giúp?</a>
+                </div>
+            </div>
+            <div class="auth_form_controls">
+                <button class="btn btn-nomal auth_form_controls_back" onclick="location.href='../index.html'">TRỞ LẠI</button>
+                <button class="btn btn-primary">ĐĂNG NHẬP</button>
+            </div>
+        </div>
+        <div class="auth_form_socials">
+            <a href="" class="btn btn_with-icon btn-sizes auth_form_socials-facebook">
+                <i class="fa-brands fa-facebook-square auth-form_socials-icon"></i>
+                <span class="auth_form_socials_lable">Đăng nhập với Facebook</span>
+            </a>
+            <a href="" class="btn btn_with-icon btn-sizes auth_form_socials-google">
+                <i class="fa-brands fa-google auth-form_socials-icon"></i>
+                <span class="auth_form_socials_lable" onclick="parent.open('https://www.google.com.vn/?hl=vi')">Đăng nhập với Google</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
